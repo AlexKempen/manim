@@ -37,7 +37,7 @@ __all__ = [
     "Wiggle",
 ]
 
-from typing import Callable, Iterable, Optional, Tuple, Type, Union
+from typing import Callable, Iterable, Tuple, Type, Union
 
 import numpy as np
 from colour import Color
@@ -151,7 +151,7 @@ class Indicate(Transform):
         mobject: "Mobject",
         scale_factor: float = 1.2,
         color: str = YELLOW,
-        rate_func: Callable[[float, Optional[float]], np.ndarray] = there_and_back,
+        rate_func: Callable[[float, float | None], np.ndarray] = there_and_back,
         **kwargs
     ) -> None:
         self.color = color
@@ -520,8 +520,8 @@ class Wiggle(Animation):
         scale_value: float = 1.1,
         rotation_angle: float = 0.01 * TAU,
         n_wiggles: int = 6,
-        scale_about_point: Optional[np.ndarray] = None,
-        rotate_about_point: Optional[np.ndarray] = None,
+        scale_about_point: np.ndarray | None = None,
+        rotate_about_point: np.ndarray | None = None,
         run_time: float = 2,
         **kwargs
     ) -> None:
