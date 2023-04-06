@@ -15,7 +15,7 @@ __all__ = [
 import itertools as it
 import sys
 import typing
-from typing import Callable, Optional, Sequence, Union
+from typing import Callable, Sequence
 
 import colour
 import numpy as np
