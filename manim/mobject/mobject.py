@@ -20,7 +20,6 @@ from typing import (
     Dict,
     Iterable,
     List,
-    Optional,
     Sequence,
     Tuple,
     Type,
@@ -120,7 +119,7 @@ class Mobject:
 
         Returns
         -------
-        Optional[Callable[[Mobject, ...], Animation]]
+        Callable[[Mobject, ...], Animation] | None
             The function returning the override animation or ``None`` if no such animation
             override is defined.
         """
