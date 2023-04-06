@@ -148,7 +148,7 @@ class Paragraph(VGroup):
         self,
         *text: Sequence[str],
         line_spacing: float = -1,
-        alignment: Optional[str] = None,
+        alignment: str | None = None,
         **kwargs,
     ) -> None:
         self.line_spacing = line_spacing
